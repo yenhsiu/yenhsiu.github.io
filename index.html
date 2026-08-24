@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yen-Hsiu Chen</title>
+<meta name="author" content="Yen-Hsiu Chen">
+<style>
+:root{
+  --text:#000;
+  --link:#0645AD;
+  --dim:#555;
+  --line:#e2e2e2;
+  --max:920px;
+}
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  background:#fff;
+  color:var(--text);
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size:16px;
+  line-height:1.5;
+}
+.page{ max-width:var(--max); margin:0 auto; padding:60px 24px 80px; }
+
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* ---- Header: photo + intro ---- */
+.header{
+  display:grid;
+  grid-template-columns: 200px 1fr;
+  gap:44px;
+  align-items:center;
+  margin-bottom:56px;
+}
+@media (max-width:640px){
+  .header{ grid-template-columns:1fr; }
+  .avatar{ width:140px; margin:0 auto; }
+}
+.avatar{
+  width:200px; height:200px; border-radius:4px;
+  background: #f2f2f2;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.avatar img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position: 50% 20%;
+  display:block;
+}
+.header h1{ font-size:32px; font-weight:normal; margin:0 0 12px; }
+.header p{ margin:0 0 12px; }
+.header .links a{ margin-right:2px; }
+.header .links span.sep{ color:#ccc; margin:0 6px; }
+
+/* ---- Section rows (Barron-style table blocks) ---- */
+.section{ margin-bottom:44px; }
+.section > h2{
+  font-size:22px; font-weight:normal;
+  border-bottom:1px solid var(--line);
+  padding-bottom:6px;
+  margin:0 0 20px;
+}
+
+/* News */
+.news{ list-style:none; margin:0; padding:0; }
+.news li{ margin-bottom:8px; padding-left:1.3em; text-indent:-1.3em; }
+.news .date{ color:var(--dim); font-family: Arial, sans-serif; font-size:13px; }
+
+/* Publication / research rows */
+.pub{
+  display:grid;
+  grid-template-columns: 160px 1fr;
+  gap:26px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+.pub:last-child{ border-bottom:none; }
+@media (max-width:640px){
+  .pub{ grid-template-columns:1fr; }
+  .pub-thumb{ width:100%; max-width:220px; }
+}
+.pub-thumb{
+  width:160px; height:110px; border-radius:3px;
+  background:#fff;
+  border:1px solid var(--line);
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.pub-thumb img{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+.pub-title{ font-weight:bold; font-size:16.5px; margin-bottom:5px; display:block; }
+.pub-authors{ margin-bottom:4px; }
+.pub-venue{ font-style:italic; margin-bottom:6px; }
+.pub-venue b{ font-style:normal; }
+.pub-links{ font-family: Arial, sans-serif; font-size:13px; margin-bottom:8px; }
+.pub-links span.sep{ color:#ccc; margin:0 6px; }
+.pub-desc{ color:var(--dim); font-size:14.5px; }
+
+/* Experience */
+.exp{ list-style:none; margin:0; padding:0; }
+.exp li{ margin-bottom:14px; }
+.exp b{ font-weight:bold; }
+.exp .when{ font-family: Arial, sans-serif; font-size:13px; color:var(--dim); }
+.exp .role{ color:var(--dim); }
+
+/* Simple text sections (skills, education) */
+.plain p{ margin:0 0 8px; }
+.plain b{ font-weight:bold; }
+
+footer{
+  margin-top:60px; padding-top:18px; border-top:1px solid var(--line);
+  font-family: Arial, sans-serif; font-size:12px; color:#999;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="avatar"><img src="assets/me.jpg" alt="Yen-Hsiu Chen"></div>
+    <div>
+      <h1>Yen-Hsiu Chen</h1>
+      <p>I am a Ph.D. candidate at <a href="https://www.ynu.ac.jp/english/" target="_blank" rel="noopener">Yokohama National University</a>, advised by <a href="https://shiralab.ynu.ac.jp/" target="_blank" rel="noopener">Prof. Shinichi Shirakawa</a>. My research centers on split inference and model compression — quantization, feature compression, and hardware-aware architecture design — to run large vision and vision-language models under real hardware and bandwidth constraints, currently extended to LLaVA-series VLMs.<br>I have hands-on experience deploying models with CUDA (C++) on NVIDIA Jetson and Qualcomm SNPE/QNN platforms, and enjoy bridging complex AI research with practical engineering.<br>Fluent in Mandarin, English, and Japanese.</p>
+      <p class="links">
+        <a href="mailto:chen-yen-hsiu-tx@ynu.jp">Email</a><span class="sep">/</span><a href="https://linkedin.com/in/Eira-Chen" target="_blank" rel="noopener">LinkedIn</a><span class="sep">/</span><a href="https://github.com/yenhsiu" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div class="pub-thumb"><img src="assets/llava_fig.jpg" alt="Mixed-precision visual token allocation under bandwidth budget S"></div>
+      <div>
+        <span class="pub-title">Bandwidth-Aware Dynamic Split Inference for Large Multimodal Models via Mixed-Precision Quantization</span>
+        <div class="pub-authors"><b>Yen-Hsiu Chen</b>, Shinichi Shirakawa</div>
+        <div class="pub-venue"><b>In preparation</b></div>
+        <div class="pub-links">
+          Project page and code will be linked once the paper is public.
+        </div>
+        <div class="pub-desc">Extends the split-inference framework to LLaVA-series VLMs, combining training-free visual token selection with sink-aware mixed-precision quantization so the number of transmitted tokens and their bit-depth jointly adapt to the available bandwidth.</div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb"><img src="assets/rqdb_fig.jpg" alt="RQDB: RVQ-bottleneck encoder on edge, decoder on server"></div>
+      <div>
+        <span class="pub-title">Residual Vector Quantization-Based Dynamic Bottleneck for Latency-Accuracy Trade-off in Split Inference</span>
+        <div class="pub-authors"><b>Chen Yen-Hsiu</b>, et al.</div>
+        <div class="pub-venue"><b>IEEE Internet of Things Journal</b> — under review</div>
+        <div class="pub-links">
+          Paper link will be added once the review process concludes.
+        </div>
+        <div class="pub-desc">Extended journal version of the GlobeCom 2024 paper below. Introduces RQDB, a hierarchical residual VQ module inserted at a fixed split point and trained progressively so each quantization level is independently task-optimized, letting the compression rate adapt to runtime bandwidth without retraining or repartitioning. On EfficientNet-B0/B4 image classification, RQDB holds a 90 ms real-time target while reaching up to 4.86× speedup over Cloud-INT8; on PointPillars 3D detection, it retains 95.2% of FP32 accuracy at 34.13× data reduction and 90.9% at 85.33× reduction.</div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb"><img src="assets/globalcom_fig.jpg" alt="Candidate split points with per-point codebook encoder/decoder"></div>
+      <div>
+        <span class="pub-title">Enhancing Latency-Accuracy Tradeoff in Dynamic Split Inference via Vector Quantized Bottleneck</span>
+        <div class="pub-authors"><b>Chen Yen-Hsiu</b>, Yoichi Hirose, Shoma Shimizu, Shota Saito, Kento Uchida, Shinichi Shirakawa, Takayuki Nishio</div>
+        <div class="pub-venue"><b>2024 IEEE GlobeCom Workshops</b> — Ubiquitous Network Intelligence for Next Generation Wireless Networks<br>Cape Town, South Africa, December 8–12, 2024</div>
+        <div class="pub-links">
+          <a href="https://ieeexplore.ieee.org/document/11100386/" target="_blank" rel="noopener">Paper</a>
+        </div>
+        <div class="pub-desc">Introduces a vector-quantized bottleneck embedded at multiple candidate split points in the model, compressing split-inference traffic by 50–200× depending on split point and enabling dynamic split-point selection to fit the available communication bandwidth. On EfficientNet-B0, this cuts total latency by roughly 5–90% across communication speeds with only minimal accuracy loss.</div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-thumb"><img src="assets/nas_fig.jpg" alt="One-shot NAS jointly searching architecture and split point"></div>
+      <div>
+        <span class="pub-title">Neural Architecture Search for Improving Latency-Accuracy Trade-off in Split Computing</span>
+        <div class="pub-authors">Shoma Shimizu, Takayuki Nishio, Shota Saito, Yoichi Hirose, <b>Chen Yen-Hsiu</b>, Shinichi Shirakawa</div>
+        <div class="pub-venue"><b>2022 IEEE GlobeCom Workshops</b> — Edge Learning over 5G Mobile Networks and Beyond<br>Rio de Janeiro, Brazil, December 4–8, 2022</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2208.13968" target="_blank" rel="noopener">Paper</a>
+        </div>
+        <div class="pub-desc">Applies neural architecture search to improve the latency-accuracy trade-off of split-computing systems.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+    <ul class="exp">
+      <li><b>OPPO Inc.</b>, Kanagawa, Japan — <span class="when">Nov 2024 – Feb 2025</span><br><span class="role">Model Acceleration &amp; Algorithm Intern — INT8/FP16 NPU quantization on Qualcomm SNPE/QNN</span></li>
+      <li><b>CoLab Inc.</b>, Kanagawa, Japan — <span class="when">Aug 2022 – Oct 2024</span><br><span class="role">AI Research &amp; Development Intern — vision-guided robotic arm control via ROS/PLC integration</span></li>
+      <li><b>NeuronBasic Technology Inc.</b>, Hsinchu, Taiwan — <span class="when">Oct 2021 – Mar 2022</span><br><span class="role">AI Engineering Assistant — HOG + linear-SVM models for pattern detection</span></li>
+      <li><b>Lam Research Inc.</b>, Taichung, Taiwan — <span class="when">Jul 2021 – Sep 2021</span><br><span class="role">AI Data Analyst Summer Intern — ML-based troubleshooting for wafer manufacturing data</span></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Award</h2>
+    <ul class="exp">
+      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b> — fully funded — <span class="when">2024 – 2027</span><br><span class="role">Ph.D. program, domestic recruitment</span></li>
+      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b> — fully funded — <span class="when">2022 – 2024</span><br><span class="role">M.S. program, overseas recruitment</span></li>
+      <li><b>Pedestrian Tracking Drone Search System</b> — 2nd Place, Bachelor Graduate Contest — <span class="when">2021</span></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul class="exp">
+      <li><b>Ph.D. in Computer Science and Information Engineering</b>, Yokohama National University — <span class="when">Apr 2024 – Mar 2027 (expected)</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa — efficient deep learning, edge AI, model compression</span></li>
+      <li><b>M.S. in Computer Science and Information Engineering</b>, Yokohama National University — <span class="when">Apr 2022 – Mar 2024</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa — efficient deep learning, edge AI, model compression</span></li>
+      <li><b>B.S. in Computer Science and Information Engineering</b>, National University of Kaohsiung, Taiwan — <span class="when">Jun 2017 – Jun 2021</span><br><span class="role">Advisor: Prof. Tzung-Pei Hong — artificial intelligence &amp; image processing</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    Template adapted from the personal-page style popularized by Jon Barron.
+  </footer>
+
+</div>
+</body>
+</html>
