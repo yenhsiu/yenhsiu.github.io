@@ -1,4 +1,4 @@
-# yen-hsiu-chen.github.io
+# yenhsiu.github.io
 
 Personal academic homepage for Yen-Hsiu (Eira) Chen — Ph.D. candidate at Yokohama National University, researching split inference and model compression for edge–cloud AI.
 
