@@ -55,6 +55,16 @@ a:hover{ text-decoration:underline; }
 .header p{ margin:0 0 12px; }
 .header .links a{ margin-right:2px; }
 .header .links span.sep{ color:#ccc; margin:0 6px; }
+.keywords{
+  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  font-size:17px; font-weight:700; letter-spacing:0.01em;
+  color:#111; line-height:1.6; margin:2px 0 16px;
+}
+.research-tags{
+  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  font-size:13px; font-style:italic; color:var(--dim);
+  margin:0 0 14px;
+}
 
 /* ---- Section rows (Barron-style table blocks) ---- */
 .section{ margin-bottom:44px; }
@@ -110,6 +120,24 @@ a:hover{ text-decoration:underline; }
 .exp .when{ font-family: Arial, sans-serif; font-size:13px; color:var(--dim); }
 .exp .role{ color:var(--dim); }
 
+.exp-row{ display:grid; grid-template-columns: 56px 1fr; gap:18px; align-items:start; }
+@media (max-width:520px){ .exp-row{ grid-template-columns: 44px 1fr; gap:12px; } }
+.logo{
+  width:56px; height:56px; border-radius:6px;
+  border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  font-family: Arial, sans-serif; font-weight:700; font-size:12px;
+  letter-spacing:0.02em; color:#444;
+  background:#fafafa;
+}
+@media (max-width:520px){ .logo{ width:44px; height:44px; font-size:10px; } }
+.logo-img{ background:#fff; padding:4px; }
+.logo-img img{ width:100%; height:100%; object-fit:contain; }
+.logo-oppo{ color:#0a7d3d; border-color:#bfe3cd; background:#f3faf5; }
+.logo-colab{ color:#8a5a2b; border-color:#e6d3bd; background:#fbf6ef; }
+.logo-nb{ color:#2557a7; border-color:#c3d6ef; background:#f0f5fc; }
+.logo-lam{ color:#a12b2b; border-color:#eec7c7; background:#fcf1f1; }
+
 /* Simple text sections (skills, education) */
 .plain p{ margin:0 0 8px; }
 .plain b{ font-weight:bold; }
@@ -127,7 +155,8 @@ footer{
     <div class="avatar"><img src="assets/me.jpg" alt="Yen-Hsiu Chen"></div>
     <div>
       <h1>Yen-Hsiu Chen</h1>
-      <p>I am a Ph.D. candidate at <a href="https://www.ynu.ac.jp/english/" target="_blank" rel="noopener">Yokohama National University</a>, advised by <a href="https://shiralab.ynu.ac.jp/" target="_blank" rel="noopener">Prof. Shinichi Shirakawa</a>. My research centers on split inference and model compression — quantization, feature compression, and hardware-aware architecture design — to run large vision and vision-language models under real hardware and bandwidth constraints, currently extended to LLaVA-series VLMs.<br>I have hands-on experience deploying models with CUDA (C++) on NVIDIA Jetson and Qualcomm SNPE/QNN platforms, and enjoy bridging complex AI research with practical engineering.<br>Fluent in Mandarin, English, and Japanese.</p>
+      <p>I am a Ph.D. candidate at <a href="https://www.ynu.ac.jp/english/" target="_blank" rel="noopener">Yokohama National University</a>, advised by <a href="https://shiralab.ynu.ac.jp/" target="_blank" rel="noopener">Prof. Shinichi Shirakawa</a>. My research centers on split inference and model compression (quantization, feature compression, and hardware-aware architecture design) to run large vision and vision-language models under real hardware and bandwidth constraints, currently extended to LLaVA-series VLMs.<br>I have hands-on experience deploying models with CUDA (C++) on NVIDIA Jetson and Qualcomm SNPE/QNN platforms, and enjoy bridging complex AI research with practical engineering.<br>Fluent in Mandarin, English, and Japanese.</p>
+      <p class="research-tags">Research focus: multimodal inference optimization, edge-cloud inference, model compression</p>
       <p class="links">
         <a href="mailto:chen-yen-hsiu-tx@ynu.jp">Email</a><span class="sep">/</span><a href="https://linkedin.com/in/Eira-Chen" target="_blank" rel="noopener">LinkedIn</a><span class="sep">/</span><a href="https://github.com/yenhsiu" target="_blank" rel="noopener">GitHub</a>
       </p>
@@ -155,7 +184,7 @@ footer{
       <div>
         <span class="pub-title">Residual Vector Quantization-Based Dynamic Bottleneck for Latency-Accuracy Trade-off in Split Inference</span>
         <div class="pub-authors"><b>Chen Yen-Hsiu</b>, et al.</div>
-        <div class="pub-venue"><b>IEEE Internet of Things Journal</b> — under review</div>
+        <div class="pub-venue"><b>IEEE Internet of Things Journal</b> (under review)</div>
         <div class="pub-links">
           Paper link will be added once the review process concludes.
         </div>
@@ -168,7 +197,7 @@ footer{
       <div>
         <span class="pub-title">Enhancing Latency-Accuracy Tradeoff in Dynamic Split Inference via Vector Quantized Bottleneck</span>
         <div class="pub-authors"><b>Chen Yen-Hsiu</b>, Yoichi Hirose, Shoma Shimizu, Shota Saito, Kento Uchida, Shinichi Shirakawa, Takayuki Nishio</div>
-        <div class="pub-venue"><b>2024 IEEE GlobeCom Workshops</b> — Ubiquitous Network Intelligence for Next Generation Wireless Networks<br>Cape Town, South Africa, December 8–12, 2024</div>
+        <div class="pub-venue"><b>2024 IEEE GlobeCom Workshops</b>, Ubiquitous Network Intelligence for Next Generation Wireless Networks<br>Cape Town, South Africa, December 8–12, 2024</div>
         <div class="pub-links">
           <a href="https://ieeexplore.ieee.org/document/11100386/" target="_blank" rel="noopener">Paper</a>
         </div>
@@ -181,7 +210,7 @@ footer{
       <div>
         <span class="pub-title">Neural Architecture Search for Improving Latency-Accuracy Trade-off in Split Computing</span>
         <div class="pub-authors">Shoma Shimizu, Takayuki Nishio, Shota Saito, Yoichi Hirose, <b>Chen Yen-Hsiu</b>, Shinichi Shirakawa</div>
-        <div class="pub-venue"><b>2022 IEEE GlobeCom Workshops</b> — Edge Learning over 5G Mobile Networks and Beyond<br>Rio de Janeiro, Brazil, December 4–8, 2022</div>
+        <div class="pub-venue"><b>2022 IEEE GlobeCom Workshops</b>, Edge Learning over 5G Mobile Networks and Beyond<br>Rio de Janeiro, Brazil, December 4–8, 2022</div>
         <div class="pub-links">
           <a href="https://arxiv.org/abs/2208.13968" target="_blank" rel="noopener">Paper</a>
         </div>
@@ -193,28 +222,40 @@ footer{
   <div class="section">
     <h2>Experience</h2>
     <ul class="exp">
-      <li><b>OPPO Inc.</b>, Kanagawa, Japan — <span class="when">Nov 2024 – Feb 2025</span><br><span class="role">Model Acceleration &amp; Algorithm Intern — INT8/FP16 NPU quantization on Qualcomm SNPE/QNN</span></li>
-      <li><b>CoLab Inc.</b>, Kanagawa, Japan — <span class="when">Aug 2022 – Oct 2024</span><br><span class="role">AI Research &amp; Development Intern — vision-guided robotic arm control via ROS/PLC integration</span></li>
-      <li><b>NeuronBasic Technology Inc.</b>, Hsinchu, Taiwan — <span class="when">Oct 2021 – Mar 2022</span><br><span class="role">AI Engineering Assistant — HOG + linear-SVM models for pattern detection</span></li>
-      <li><b>Lam Research Inc.</b>, Taichung, Taiwan — <span class="when">Jul 2021 – Sep 2021</span><br><span class="role">AI Data Analyst Summer Intern — ML-based troubleshooting for wafer manufacturing data</span></li>
+      <li class="exp-row">
+        <div class="logo logo-img"><img src="assets/oppo_logo.jpeg" alt="OPPO"></div>
+        <div><b>OPPO Inc.</b>, Kanagawa, Japan <span class="when">(Nov 2024 – Feb 2025)</span><br><span class="role">Model Acceleration &amp; Algorithm Intern: INT8/FP16 NPU quantization on Qualcomm SNPE/QNN</span></div>
+      </li>
+      <li class="exp-row">
+        <div class="logo logo-img"><img src="assets/colab_jp_logo.jpeg" alt="CoLab"></div>
+        <div><b>CoLab Inc.</b>, Kanagawa, Japan <span class="when">(Aug 2022 – Oct 2024)</span><br><span class="role">AI Research &amp; Development Intern: vision-guided robotic arm control via ROS/PLC integration</span></div>
+      </li>
+      <li class="exp-row">
+        <div class="logo logo-nb">NB</div>
+        <div><b>NeuronBasic Technology Inc.</b>, Hsinchu, Taiwan <span class="when">(Oct 2021 – Mar 2022)</span><br><span class="role">AI Engineering Assistant: HOG + linear-SVM models for pattern detection</span></div>
+      </li>
+      <li class="exp-row">
+        <div class="logo logo-img"><img src="assets/lam_research_logo.jpeg" alt="Lam Research"></div>
+        <div><b>Lam Research Inc.</b>, Taichung, Taiwan <span class="when">(Jul 2021 – Sep 2021)</span><br><span class="role">AI Data Analyst Summer Intern: ML-based troubleshooting for wafer manufacturing data</span></div>
+      </li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Award</h2>
     <ul class="exp">
-      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b> — fully funded — <span class="when">2024 – 2027</span><br><span class="role">Ph.D. program, domestic recruitment</span></li>
-      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b> — fully funded — <span class="when">2022 – 2024</span><br><span class="role">M.S. program, overseas recruitment</span></li>
-      <li><b>Pedestrian Tracking Drone Search System</b> — 2nd Place, Bachelor Graduate Contest — <span class="when">2021</span></li>
+      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b>, fully funded <span class="when">(2024 – 2027)</span><br><span class="role">Ph.D. program, domestic recruitment</span></li>
+      <li><b>JTEA Scholarship (Japanese Government Scholarship)</b>, fully funded <span class="when">(2022 – 2024)</span><br><span class="role">M.S. program, overseas recruitment</span></li>
+      <li><b>Pedestrian Tracking Drone Search System</b>, 2nd Place, Bachelor Graduate Contest <span class="when">(2021)</span></li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Education</h2>
     <ul class="exp">
-      <li><b>Ph.D. in Computer Science and Information Engineering</b>, Yokohama National University — <span class="when">Apr 2024 – Mar 2027 (expected)</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa — efficient deep learning, edge AI, model compression</span></li>
-      <li><b>M.S. in Computer Science and Information Engineering</b>, Yokohama National University — <span class="when">Apr 2022 – Mar 2024</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa — efficient deep learning, edge AI, model compression</span></li>
-      <li><b>B.S. in Computer Science and Information Engineering</b>, National University of Kaohsiung, Taiwan — <span class="when">Jun 2017 – Jun 2021</span><br><span class="role">Advisor: Prof. Tzung-Pei Hong — artificial intelligence &amp; image processing</span></li>
+      <li><b>Ph.D. in Computer Science and Information Engineering</b>, Yokohama National University <span class="when">(Apr 2024 – Mar 2027, expected)</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa. Efficient deep learning, edge AI, model compression.</span></li>
+      <li><b>M.S. in Computer Science and Information Engineering</b>, Yokohama National University <span class="when">(Apr 2022 – Mar 2024)</span><br><span class="role">Advisor: Prof. Shinichi Shirakawa. Efficient deep learning, edge AI, model compression.</span></li>
+      <li><b>B.S. in Computer Science and Information Engineering</b>, National University of Kaohsiung, Taiwan <span class="when">(Jun 2017 – Jun 2021)</span><br><span class="role">Advisor: Prof. Tzung-Pei Hong. Artificial intelligence &amp; image processing.</span></li>
     </ul>
   </div>
 
