@@ -9,6 +9,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 <meta name="author" content="Yen-Hsiu (Eira) Chen">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
 :root{
   --text:#000;
   --link:#0645AD;
@@ -21,7 +23,7 @@ body{
   margin:0;
   background:#fff;
   color:var(--text);
-  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-family: 'IBM Plex Sans', -apple-system, Helvetica, Arial, sans-serif;
   font-size:16px;
   line-height:1.5;
 }
@@ -54,23 +56,23 @@ a:hover{ text-decoration:underline; }
   object-position: 50% 20%;
   display:block;
 }
-.header h1{ font-size:32px; font-weight:normal; margin:0 0 12px; }
+.header h1{ font-size:32px; font-weight:600; margin:0 0 12px; letter-spacing:-0.01em; }
 .header p{ margin:0 0 12px; }
 .header .links{ display:flex; gap:16px; flex-wrap:wrap; }
 .header .links a{
   display:inline-flex; align-items:center; gap:6px;
-  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', -apple-system, Helvetica, Arial, sans-serif;
   font-size:14px; color:var(--link);
 }
 .header .links a svg{ flex-shrink:0; }
 .header .links a:hover{ text-decoration:underline; }
 .keywords{
-  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', -apple-system, Helvetica, Arial, sans-serif;
   font-size:17px; font-weight:700; letter-spacing:0.01em;
   color:#111; line-height:1.6; margin:2px 0 16px;
 }
 .research-tags{
-  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', -apple-system, Helvetica, Arial, sans-serif;
   font-size:13px; font-style:italic; color:var(--dim);
   margin:0 0 14px;
 }
@@ -78,7 +80,7 @@ a:hover{ text-decoration:underline; }
 /* ---- Section rows (Barron-style table blocks) ---- */
 .section{ margin-bottom:44px; }
 .section > h2{
-  font-size:22px; font-weight:normal;
+  font-size:20px; font-weight:600;
   border-bottom:1px solid var(--line);
   padding-bottom:6px;
   margin:0 0 20px;
@@ -87,7 +89,7 @@ a:hover{ text-decoration:underline; }
 /* News */
 .news{ list-style:none; margin:0; padding:0; }
 .news li{ margin-bottom:8px; padding-left:1.3em; text-indent:-1.3em; }
-.news .date{ color:var(--dim); font-family: Arial, sans-serif; font-size:13px; }
+.news .date{ color:var(--dim); font-family: 'IBM Plex Sans', Arial, sans-serif; font-size:13px; }
 
 /* Publication / research rows */
 .pub{
@@ -118,7 +120,7 @@ a:hover{ text-decoration:underline; }
 .pub-authors{ margin-bottom:4px; }
 .pub-venue{ font-style:italic; margin-bottom:6px; }
 .pub-venue b{ font-style:normal; }
-.pub-links{ font-family: Arial, sans-serif; font-size:13px; margin-bottom:8px; }
+.pub-links{ font-family: 'IBM Plex Sans', Arial, sans-serif; font-size:13px; margin-bottom:8px; }
 .pub-links span.sep{ color:#ccc; margin:0 6px; }
 .pub-desc{ color:var(--dim); font-size:14.5px; }
 
@@ -126,7 +128,7 @@ a:hover{ text-decoration:underline; }
 .exp{ list-style:none; margin:0; padding:0; }
 .exp li{ margin-bottom:14px; }
 .exp b{ font-weight:bold; }
-.exp .when{ font-family: Arial, sans-serif; font-size:13px; color:var(--dim); }
+.exp .when{ font-family: 'IBM Plex Sans', Arial, sans-serif; font-size:13px; color:var(--dim); }
 .exp .role{ color:var(--dim); }
 
 .exp-row{ display:grid; grid-template-columns: 56px 1fr; gap:18px; align-items:start; }
@@ -135,7 +137,7 @@ a:hover{ text-decoration:underline; }
   width:56px; height:56px; border-radius:6px;
   border:1px solid var(--line);
   display:flex; align-items:center; justify-content:center;
-  font-family: Arial, sans-serif; font-weight:700; font-size:12px;
+  font-family: 'IBM Plex Sans', Arial, sans-serif; font-weight:700; font-size:12px;
   letter-spacing:0.02em; color:#444;
   background:#fafafa;
 }
@@ -154,7 +156,7 @@ a:hover{ text-decoration:underline; }
 
 footer{
   margin-top:60px; padding-top:18px; border-top:1px solid var(--line);
-  font-family: Arial, sans-serif; font-size:12px; color:#999;
+  font-family: 'IBM Plex Sans', Arial, sans-serif; font-size:12px; color:#999;
 }
 </style>
 </head>
