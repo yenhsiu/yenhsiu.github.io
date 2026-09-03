@@ -74,9 +74,10 @@ a:hover{ text-decoration:underline; }
 }
 .research-tags{
   font-family: 'IBM Plex Sans', -apple-system, Helvetica, Arial, sans-serif;
-  font-size:13px; font-style:italic; color:var(--dim);
+  font-size:16px; color:#333;
   margin:0 0 14px;
 }
+.research-tags b{ color:#111; font-weight:600; }
 
 /* ---- Section rows (Barron-style table blocks) ---- */
 .section{ margin-bottom:44px; }
@@ -172,7 +173,7 @@ footer{
       <p>My research makes large vision and vision-language models run under real hardware and bandwidth constraints. I work on split inference and model compression, spanning quantization, feature compression, and hardware-aware architecture design, currently extended to LLaVA-series VLMs. The goal is efficient multimodal LLM inference that stays practical across edge and cloud deployment.</p>
       <p>I also work close to the hardware. I have implemented model inference in CUDA/C++ on NVIDIA Jetson and deployed INT8/FP16 quantized models to Qualcomm NPUs with SNPE/QNN, so my research is grounded in real latency, memory, and bandwidth budgets.</p>
       <p>Fluent in Mandarin, English, and Japanese.</p>
-      <p class="research-tags">Research focus: multimodal inference optimization, edge-cloud inference, model compression</p>
+      <p class="research-tags"><b>Research focus:</b> computer vision, efficient multimodal (VLM) inference, model compression &amp; quantization, hardware-aware model architecture, edge-cloud split inference</p>
       <p class="links">
         <a href="mailto:chen-yen-hsiu-tx@ynu.jp" title="Email" aria-label="Email">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
